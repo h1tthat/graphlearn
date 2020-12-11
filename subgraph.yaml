@@ -21,4 +21,4 @@ dataSources:
           file: ./abis/Empty.json
       blockHandlers:
         - handler: handleBlock
-      file: ./src/mapping.ts
+  

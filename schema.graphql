@@ -1,36 +1,6 @@
-type Block @entity {
+type Gravatar @entity {
   id: ID!
-
-  " Block height "
-  number: BigInt!
-
-  " The block sizes actually determined by the block's gas limit [bytes] "
-  size: BigInt
-
-  " The total gas used in the block [gwei] "
-  gasUsed: BigInt!
-
-  " Total gas limit provided by all transactions in the block [gwei] "
-  gasLimit: BigInt!
-
-  " The date and time at which the block was mined [seconds] "
-  timestamp: BigInt!
-}
-
-type Transaction @entity {
-  " Transaction hash "
-  id: ID!
-
-  # TODO: from: Bytes!
-
-  # TODO: to: Bytes!
-
-  " The total amount of gas used for the transaction [gwei] "
-  gasUsed: BigInt!
-
-  " The price of one unit of gas used in the transaction [gwei] "
-  gasPrice: BigInt!
-
-  " The total cost of the transaction "
-  transactionFee: BigInt!
+  owner: Bytes!
+  displayName: String!
+  imageUrl: String!
 }
